@@ -381,21 +381,4 @@ class Spider(Robot):
             
 
 
-def test():  
-    while True:
-        sp.avoid_move(35)
-if __name__ == "__main__":
-    import time
-    sp = Spider([1,2,3,4,5,6,7,8,9,10,11,12])
-    # sp.set_offset([15,-4,-7,  -8,-6,6,  10,10,-10,  -5,3,-5])
-    # sp.do_action("ready", speed=100)
-    sp.set_offset([15,-5,-7,  -7,-5,5,  10,5,-4,  -10,3,-5])
-    # sp.do_action("stand",step=1,speed=100)
-    # sp.do_action("forward",step=2,speed=100)
-    sp.do_action("sit",step=1,speed=100)
-    # time.sleep(1)
-    # sp.do_action("stand",step=1,speed=100)
-    # sp.do_action("forward",step=2,speed=100)
-    # sp.do_action("forward",step=2,speed=100)
-    # test()
     
