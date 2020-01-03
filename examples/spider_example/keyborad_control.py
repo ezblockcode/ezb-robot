@@ -1,4 +1,3 @@
-# import picar_4wd as fc
 import sys
 import tty
 import termios
@@ -36,20 +35,10 @@ def readkey(getchar_fn=None):
 def Keyborad_control():
     sp = Spider([1,2,3,4,5,6,7,8,9,10,11,12])
     
-    sp.set_offset([15,-4,-7,  -8,-6,6,  10,10,-10,  -5,3,-5])
-    # sp.do_action("ready", speed=100)
     while True:
         global power_val
         key=readkey()
         print(key)
-        if key=='6':
-            if power_val <=90:
-                power_val += 10
-                print("power_val:",power_val)
-        elif key=='4':
-            if power_val >=10:
-                power_val -= 10
-                print("power_val:",power_val)
         if key=='w':
             sp.do_action("forward",speed=100)
         elif key=='a':
@@ -60,6 +49,8 @@ def Keyborad_control():
             sp.do_action("turn right",speed=100)
         elif key=='n':
             sp.do_action("sit",speed=100)
+        elif key=='r':
+            sp.do_action("dance",speed=100)
         else:
             if key=='l':
                 sp.do_action("look right",speed=100)
@@ -75,9 +66,7 @@ def Keyborad_control():
                 sp.do_action("wave",speed=100)
             else:
                 sp.do_action("stand",speed=100)
-            
-        # else:
-        #     sp.do_action("sit",speed=100)
+    
         if key=='q':
             print("quit")  
             break  
