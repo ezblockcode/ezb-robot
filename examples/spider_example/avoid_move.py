@@ -1,6 +1,6 @@
 from spider import Spider
 from ezblock import Pin
-from ultrasonic import Ultrasonic
+from ezblock import Ultrasonic
 
 us = Ultrasonic(Pin('D0'), Pin('D1'))
 
